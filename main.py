@@ -1,7 +1,9 @@
-import os
 import json
+import os
+
 import pandas as pd
 from openpyxl import load_workbook
+
 
 def json_to_excel(json_file, excel_file):
     try:
@@ -40,6 +42,7 @@ def json_to_excel(json_file, excel_file):
     except Exception as e:
         print(f"Đã xảy ra lỗi: {e}")
 
+
 def convert_all_json_to_excel(input_folder, output_folder):
     try:
         # Tạo thư mục đầu ra nếu chưa tồn tại
@@ -56,6 +59,7 @@ def convert_all_json_to_excel(input_folder, output_folder):
                 json_to_excel(json_file, excel_file)
     except Exception as e:
         print(f"Đã xảy ra lỗi khi chuyển đổi thư mục: {e}")
+
 
 # Ví dụ sử dụng
 input_folder = 'data'  # Thư mục chứa các tệp JSON
